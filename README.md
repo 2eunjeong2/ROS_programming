@@ -203,3 +203,21 @@ rostopic pub /turtle1/color_sensor turtlesim/Color \
 turtlesim은 이 토픽을 구독하지 않기 때문에 거북이 색이 바뀌지는 않음.
 왜냐하면 이 토픽은 '상태 출력용(Publisher 전용)이기 때문.
 ```
+
+# rostopic pub으로 정사각형 그리기
+```bash
+$ rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist -- \ '[2.0, 0.0, 0.0]' '[0.0, 0.0, 0.0]'
+
+$ rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist -- \ '[0.0, 0.0, 0.0]' '[0.0, 0.0, 1.56]'
+
+$ rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist -- \ '[2.0, 0.0, 0.0]' '[0.0, 0.0, 0.0]'
+
+$ rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist -- \ '[0.0, 0.0, 0.0]' '[0.0, 0.0, 1.56]'
+
+$ rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist -- \ '[2.0, 0.0, 0.0]' '[0.0, 0.0, 0.0]'
+
+$ rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist -- \ '[0.0, 0.0, 0.0]' '[0.0, 0.0, 1.55]'
+
+$ rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist -- \ '[2.0, 0.0, 0.0]' '[0.0, 0.0, 0.0]'
+```
+![alt text](image-2.png)
