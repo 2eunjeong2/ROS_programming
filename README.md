@@ -1,6 +1,11 @@
 # ROS development 
-- Ubuntu 20.04
-- ROS noetic
+- OS: Ubuntu 20.04 LTS (Focal)
+- ROS Version: Noetic Ninjemys
+- Python: Python3
+- Workspace: ~/catkin_ws
+
+</br>
+
 
 # ROS Install
 1. source list
@@ -18,25 +23,71 @@ curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo ap
 ```bash
 sudo apt update
 ```
+4. ROS Desktop-Full 설치
 ```bash
 sudo apt install ros-noetic-desktop-full
 ```
-4. Environment setup
+5. Environment setup
 ```bash
 source /opt/ros/noetic/setup.bash
 ```
+6. ROS 환경 설정
 ```bash
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 ```
 ```bash
 source ~/.bashrc
 ```
-5. Create a ROS Workspace
+7. 설치 확인
+```bash
+rosversion -d
+```
+출력: noetic</br>
+
+# Catkin Workspace 생성
+1. Workspace 생성
 ```bash
 $ mkdir -p ~/catkin_ws/src
 $ cd ~/catkin_ws/
 $ catkin_make
 ```
+2. Workspace 환경 등록
 ```bash
-$ echo $ROS_PACKAGE_PATH
+$ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+$ source ~/.bashrc
+```
+- source는 ROS를 사용할 수 있는 상태로 만들어주는 작업
+</br>
+
+# 필수 패키지 설치
+```bash
+$ sudo apt install ros-noetic-rospy
+$ sudo apt install ros-noetic-rosbash
+$ sudo apt install ros-noetic-turtlesim
+```
+설치 확인 :
+```bash
+rospack find rospy
+```
+</br>
+
+# Test 실행
+1. ROS Core 실행
+```bash
+roscore
+```
+2. Turtlesim 실행
+```bash
+rosrun turtlesim turtlesim_node
+```
+</br>
+
+# 환경 변수 확인
+- ROS가 패키지를 어디서 찾을지 알려주는 경로 목록을 알 수 있음
+```bash
+echo $ROS_PACKAGE_PATH
+```
+정상 예시 :
+```bash
+/home/user/catkin_ws/src:/opt/ros/noetic/share
 ```
