@@ -91,3 +91,26 @@ echo $ROS_PACKAGE_PATH
 ```bash
 /home/user/catkin_ws/src:/opt/ros/noetic/share
 ```
+</br>
+
+# Turtlesim 실습
+1. Turtlesim 방향키로 움직이기
+```bash
+rosrun turtlesim turtle_teleop_key
+```
+2. /turtle1/pose 관찰
+```bash
+ostopic echo /turtle1/pose
+```
+```
+- x: 거북이의 X 좌표. 앞으로 이동하면 값이 증가한다
+
+- y: 거북이의 Y 좌표. 위로 이동하면 값이 증가한다
+
+- theta: 거북이의 방향 (라디안). 좌회전하면 값이 증가, 우회전하면 감소한다
+
+- linear_velocity: 현재 직진 속도. 방향키 위를 누르면 2.0이 된다
+
+- angular_velocity: 현재 회전 속도. 방향키 좌를 누르면 2.0이 된다
+```
+
