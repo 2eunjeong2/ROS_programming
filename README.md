@@ -31,10 +31,6 @@ echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 ```bash
 source ~/.bashrc
 ```
-</br>
-
-# ROS Install
-
 5. Create a ROS Workspace
 ```bash
 $ mkdir -p ~/catkin_ws/src
