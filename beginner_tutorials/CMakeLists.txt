@@ -171,6 +171,7 @@ catkin_install_python(PROGRAMS
    scripts/temp_pub.py
    scripts/temp_sub.py
    scripts/turtle_pub.py
+   scripts/pose_listener.py
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
