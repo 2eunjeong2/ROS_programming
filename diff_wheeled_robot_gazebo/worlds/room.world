@@ -150,8 +150,7 @@
 
     </model>
 
-    <!-- 원기둥 장애물 -->
-
+    <!-- 원기둥 장애물 
 <model name="obstacle_1">
 
   <static>true</static>
@@ -180,7 +179,8 @@
 
   </link>
 
-</model>
+</model>-->
+
 
 
   </world>
