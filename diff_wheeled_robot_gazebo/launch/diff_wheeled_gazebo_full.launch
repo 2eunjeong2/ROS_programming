@@ -17,8 +17,8 @@
 
     <arg name="paused" value="$(arg paused)"/>
 
-    <!-- <arg name="world_name" value="$(find diff_wheeled_robot_gazebo)/worlds/room.world"/> -->
-    <arg name="world_name" value="$(find diff_wheeled_robot_gazebo)/worlds/corridor.world"/>
+    <arg name="world_name" value="$(find diff_wheeled_robot_gazebo)/world/test"/>
+    <!-- <arg name="world_name" value="$(find diff_wheeled_robot_gazebo)/worlds/corridor.world"/> -->
     
     <arg name="use_sim_time" value="$(arg use_sim_time)"/>
 
